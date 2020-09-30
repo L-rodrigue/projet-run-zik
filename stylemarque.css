@@ -1,0 +1,316 @@
+* {
+    font-family: roboto;
+  }
+  
+  body, ul, li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  header {
+    height: 600px;
+    background-image: url("images/silhouette-jeune-homme-fitness-cours-execution-lever-du-soleil_1150-14621.jpg");  
+    background-size: cover;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    color: rgba(241, 106, 60, 1);
+    text-decoration: none;
+  }
+  
+
+  h2 {
+    color: rgba(33, 156, 154, 1);
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .marque2 img {
+    width: 300px;
+    float: left;
+    margin-left: 200px;
+    padding-top: 10%;
+  }
+
+  .marque2 p {
+    padding-top: 7%;
+    margin-left: 50%;
+    margin-right: 10%;
+    padding-bottom: 10%;
+  }
+
+  p {
+    font-size: 18px;
+  }
+  
+  footer {
+    color: white;
+  }
+  
+  .headerTop {
+    padding: 20px;
+  }
+  
+  .headerTop > img {
+    width: 177px;
+    height: 99px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .headerTop {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .headerTop:hover {
+    background-color: rgba(241, 106, 60, 0.15);
+  }
+  
+  .headerTopRight {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navigation {
+    width: 80%;
+  }
+  
+  .menu {
+    padding-top: 20px;
+  }
+  
+  .menu > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu > ul > li {
+    display: inline-block;
+  }
+  
+  .menu ul li a {
+    font-size: 18px;
+  }
+  
+  .scrollMenu {
+    display: none;
+    text-align: center;
+  }
+  
+  .menu ul li:hover ul {
+    display: block;
+  }
+  
+  .scrollMenu li {
+    padding: 10px 0;
+  }
+  
+  .scrollMenu li:hover {
+    background-color: rgba(241, 106, 60, 0.15);
+    border-radius: 5px; 
+  }
+  
+  .headerBottom {
+    height: 480px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .headerBottom div {
+    width: 30%;
+  }
+  
+  .searchBar {
+    width: 100%;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .guarantees {
+    background-color: rgba(247, 244, 243, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .guarantees div {
+    width: 30%;
+    padding: 30px;
+  }
+  
+  .guarantees div p {
+    font-size: 24px;
+    margin-top: 0;
+    color: rgba(33, 156, 154, 1);
+  }
+  
+  .guarantees div img {
+    height: 75px;
+  }
+  
+  .makingOf {
+    display: flex;
+    height: 470px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .makingOf > div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .makingOf img {
+    width: 30%;
+  }
+  
+  .ourProducts {
+    text-align: center;
+    background-color: rgba(247, 244, 243, 1);
+  }
+  
+  .ourProducts > h2 {
+    margin-top: 0;
+    font-size: 48px;
+  }
+  
+  .ourProducts > div {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .product {
+    width: 30%;
+  }
+  
+  .product p {
+    padding: 20px 0;
+  }
+  .product img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .imageProduct {
+    position: relative;
+  }
+  
+  .discover {
+    width: 25%;
+    height: 30px;
+    background-color: rgba(241, 106, 60, 1);
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .discover a {
+    color: white;
+  }
+  
+  .footerTop {
+    background-color: rgba(33, 156, 154, 1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footerBottom {
+    background-color: rgba(24, 115, 113);
+  }
+  
+  .newsletter, .socialNetworks {
+    width: 40%;
+  }
+  
+  .socialNetworks {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .socialNetworks img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 20px;
+  }
+  
+  .textNewsletter {
+    text-align: center;
+  }
+  
+  .newsletterMail {
+    width: 80%;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button {
+    width: 20%;
+    background-color: rgba(241, 106, 60, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .newsletterSubmit {
+    height: 40px;
+    width: 80px;
+  }
+  
+  .footerBottomFirstPart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .footerBottomFirstPart > div {
+    width: 20%;
+  }
+  
+  .payPlug img {
+    width: 100%;
+  }
+  
+  .footerList {
+    padding: 50px 0;
+    font-size: 24px;
+  }
+  
+  .footerList li {
+    margin: 30px;
+  }
+  
+  .footerList a {
+    color: white;
+  }
+  
+  .footerBottomSecondPart {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .main-conditions{
+    margin: 2%;
+    padding: 1rem;
+  }
