@@ -1,0 +1,28 @@
+header {
+  background-image: url("images/12616.jpg");
+  height: 600px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.technologie{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.description {
+  width: 20%;
+  margin-bottom: 10px;
+}
+.image_description {
+  width: 50%;
+}
+.blue {
+  color: #219c9a;
+  font-size: 24px;
+}
+.orange{
+  color: #F16A3C;
+  font-size: 24px;
+}
