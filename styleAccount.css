@@ -1,0 +1,50 @@
+.account h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+}
+
+.categories a {
+  font-size: 32px;
+  color: rgba(33, 156, 154, 1);
+}
+
+.informations {
+}
+
+.information {
+  width: 55%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.information div {
+  display: inline-block;
+  width: 40%;
+  color: rgba(33, 156, 154, 1);
+}
+
+.information div p {
+  font-size: 24px;
+}
+
+.information div:last-child {
+  text-align: right;
+  color: rgba(255, 133, 51, 1);
+}
+
+
+.submit {
+  text-align: center;
+  padding: 0 100px 10% 0;
+}
+
+.submitInformations {
+  width: 300px;
+  font-size: 24px;
+}
