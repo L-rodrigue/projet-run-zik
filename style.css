@@ -8,9 +8,9 @@ body, ul, li {
 }
 
 header {
+  height: 600px;
   background-image: url("images/runner.jpeg");  
   background-size: cover;
-  padding: 20px 50px;
 }
 
 li {
@@ -35,6 +35,10 @@ footer {
   color: white;
 }
 
+.headerTop {
+  padding: 20px;
+}
+
 .headerTop > img {
   width: 177px;
   height: 99px;
@@ -51,6 +55,10 @@ footer {
   justify-content: space-between;
 }
 
+.headerTop:hover {
+  background-color: rgba(241, 106, 60, 0.15);
+}
+
 .headerTopRight {
   width: 60%;
   display: flex;
@@ -65,17 +73,35 @@ footer {
   padding-top: 20px;
 }
 
-.menu ul {
+.menu > ul {
   display: flex;
   justify-content: space-between;
 }
 
-.menu ul li {
+.menu > ul > li {
   display: inline-block;
 }
 
 .menu ul li a {
-  font-size: 24px;
+  font-size: 18px;
+}
+
+.scrollMenu {
+  display: none;
+  text-align: center;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.scrollMenu li {
+  padding: 10px 0;
+}
+
+.scrollMenu li:hover {
+  background-color: rgba(241, 106, 60, 0.15);
+  border-radius: 5px; 
 }
 
 .headerBottom {
