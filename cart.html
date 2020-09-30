@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styleContact.css">
+  <link rel="stylesheet" href="styleCart.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Run'Zik</title>
 </head>
@@ -12,7 +12,9 @@
   <header>
     <nav>
       <div class="headerTop">
-        <img src="images/logo.png" alt="Run'Zik">
+        <a href="index.html" title="Vers l'accueil">
+          <img src="images/logo.png" alt="Run'Zik">
+        </a>
         <div class="headerTopRight">
           <div class="navigation">
             <input class="searchBar" type="text" value="Recherche trois petits points">
@@ -52,13 +54,89 @@
                 </ul>
             </div>
           </div>
-          <img class="icon" src="images/account.png" alt="Mon compte">
-          <img class="icon" src="images/cart.png" alt="Panier">
+          <a href="account.html" title="Gérer le compte">
+            <img class="icon" src="images/account.png" alt="Mon compte">
+          </a>
+          <a href="cart.html" title="Consulter le panier">
+            <img class="icon" src="images/cart.png" alt="Panier">
+          </a>
         </div>
       </div>
     </nav>
   </header>
-  
+  <section class="cart">
+    <h2>Votre panier</h2>
+    <div class="lineCart">
+      <div class="articleCart">
+        <p>Article</p>
+      </div>
+      <div class="descriptionCart">
+        <p>Description</p>
+      </div>
+      <div class="unitPrice">
+        <p>Prix unitaire</p>
+      </div>
+      <div class="quantity">
+        <p>Quantité</p>
+      </div>
+      <div class="price">
+        <p>Prix</p>
+      </div>
+    </div>
+    <hr>
+    <div class="lineCart">
+      <div class="articleCart">
+        <p>Casque Run’Zik</p>
+      </div>
+      <div class="descriptionCart">
+        <p>Profitez pleinement de vos sorties sportives avec la montre Run’Zik S Plus.Grâce à ses nombreuses fonctionnalités et ses performances ce modèle haut de gamme répond à tous vos besoins sportifs et extra-sportifs !</p>
+      </div>
+      <div class="unitPrice">
+        <p>189,00 €</p>
+      </div>
+      <div class="quantity">
+        <div class="quantityButton">
+          <p>1</p>
+        </div>
+      </div>
+      <div class="price">
+        <p>189,00 €</p>
+      </div>
+    </div>
+    <hr>
+    <div class="lineCart">
+      <div class="articleCart">
+        <p>Brassard Run’Zik</p>
+      </div>
+      <div class="descriptionCart">
+        <p>Vous qui aimez courir en musique, le brassard Zik+ Run Belt noir vous accompagne pour vos entraînements decourses à pied. Mince et ultra-léger, il se fait oublier pour que vous restiez à l'aise et concentré sur vos performances.</p>
+      </div>
+      <div class="unitPrice">
+        <p>33,00 €</p>
+      </div>
+      <div class="quantity">
+        <div class="quantityButton">
+          <p>2</p>
+        </div>
+      </div>
+      <div class="price">
+        <p>66,00 €</p>
+      </div>
+    </div>
+    <hr>
+    <div class="lineCart">
+      <div class="articleCart"></div>
+      <div class="descriptionCart"></div>
+      <div class="unitPrice"> </div>
+      <div class="quantity"><span class="importantText">Sous-total : </span></div>
+      <div class="price">
+        <p>255,00 €</p>
+      </div>
+    </div>
+    <div class="submit">
+      <input class="button newsletterSubmit submitOrder" type="submit" value="Passer la commande">
+    </div>
+  </section>
   <footer>
     <div class="footerTop">
       <div class="newsletter">
@@ -71,9 +149,15 @@
         </div>
       </div>
       <div class="socialNetworks">
-        <img src="images/pinterest.png">
-        <img src="images/facebook.png">
-        <img src="images/twitter.png">
+        <a href="#" title="Consulter notre compte Pinterest">
+          <img src="images/pinterest.png">
+        </a>
+        <a href="#" title="Consulter notre compte Facebook">
+          <img src="images/facebook.png">
+        </a>
+        <a href="#" title="Consulter notre compte Twitter">
+          <img src="images/twitter.png">
+        </a>
       </div>
     </div>
     <div class="footerBottom">
