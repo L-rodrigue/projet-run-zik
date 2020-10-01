@@ -38,6 +38,9 @@ li {
   height: 200px;
   margin-top: 100px;
 }
+.headphone {
+  width: 30%;
+}
 .watch {
   width: 30%;
   line-height: 10px;
@@ -99,8 +102,11 @@ li {
 }
 .description {
   width: 20%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   height: 250px;;
+}
+.margin{
+  margin-top: 20px;
 }
 .presentation {
   display: flex;
