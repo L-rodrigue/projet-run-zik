@@ -1,12 +1,104 @@
 header {
   background-image: url("images/4851.jpg");
 }
+h4 {
+  font-weight: normal;
+}
+h5, h6 {
+  font-size: 18px;
+}
+span {
+  color: #F16A3C;
+  font-size: 24px;
+}
+ul {
+  margin: 30px;
+}
+li {
+  list-style: inside;
+}
+.tva {
+  font-size: 12px;
+}
 .orange {
   text-align: center;
   color: #F16A3C;
-  font-size: 24px;
+  font-size: 48px;
 }
 .blue {
   text-align: center;
   color: #219c9a;
+}
+.cart {
+  display: flex;
+  justify-content: space-around;
+}
+.watch_img {
+  width: 30%;
+  height: 200px;
+  margin-top: 100px;
+}
+.watch {
+  width: 30%;
+  line-height: 10px;
+}
+.watch p {
+  font-size: 16px;
+}
+.box h6 {
+  line-height: 5px;
+}
+.about h5 {
+  color: #219c9a;
+}
+.padding{
+  padding-bottom: 30px;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #219c9a;
+  color: white;
+  height: 65px;
+}
+.carachter {
+  padding-left: 10px;
+}
+.button_produit {
+  margin-top: 100px;
+  width: 12%;
+  font-size: 12px;
+  padding-top: 15px;
+  margin-right: 50px;
+}
+.ajout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F16A3C;
+  color: white;
+  height: 65px;
+}
+.title_des {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f4f3;
+  height: 100px;
+}
+.technologie{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.image_description {
+  width: 50%;
+  font-size: 16px;
+}
+.description {
+  width: 20%;
+  margin-bottom: 10px;
+  height: 250px;;
 }

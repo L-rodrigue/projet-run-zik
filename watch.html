@@ -58,12 +58,14 @@
   </header>
   <h3 class="orange">Montre</h3>
   <h4 class="blue">Montre Run'Zik S plus</h4>
-  <section class="product">
-    <img src="images/montreConnectered.jpeg" alt="montre téléphone">
+  <section class="cart">
+    <img class="watch_img" src="images/montreConnectered.jpeg" alt="montre téléphone">
     <div class="watch">
       <div class="price">
-        <p><span>Prix:</span>  375 €</p>
-        <p>* Tous les prix incluent la TVA</p>
+        <p>Prix:  <span>375 €</span></p>
+        <div class="tva">
+          <h4>* Tous les prix incluent la TVA</h4>
+        </div>
       </div>
       <div class="box">
         <h6>Contenu de la boîte</h6>
@@ -82,19 +84,27 @@
         <p>Coloris : noir</p>
       </div>
     </div>
-    <div class="button">
-      <div class="">
-        <label for="">Quantité</label>
+    <div class="button_produit">
+      <div class="padding">
+        <div class="quantity">
+          <label for="">Quantité :</label>
+          <p class="carachter">+</p>
+          <input type="checkbox" name="check" value="">
+          <p class="caracther">-</p>
+        </div>
       </div>
-      <div class="">
+      <div class="ajout">
+        <img class="icon white" src="images/shopping_white.png" alt="Panier">
         <label for="">Ajouter au panier</label>
       </div>
     </div>
   </section>
-  <section>
+  <div class="title_des">
     <h2>Descriptif du produit</h2>
-    <div class="">
-      <img src="images/homme_run.jpg" alt="homme running">
+  </div>
+  <section class="technologie">
+    <img class="description" src="images/homme_run.jpg" alt="homme running">
+    <div class="image_description">
       <p>Profitez pleinement de vos sorties sportives avec la montre Run’Zik S Plus. Grâce à
         ses nombreuses fonctionnalités et ses performances ce modèle haut de gamme
         répond à tous vos besoins sportifs et extra-sportifs !</p>
@@ -111,14 +121,18 @@
             extrême en milieu hostile. Son écran couleur haute résolution dispose de
             la technologie Transflective pour optimiser la lisibilité de son cadran.</p>
           </div>
-          <div class="">
+        </section>
+        <section class="technologie">
+          <div class="image_description">
             <p>Autre amélioration notable, ce modèle intègre la solution de paiement sans contact
               Pay Plug, vous permettant de payer directement avec votre montre et sans avoir
               besoin d’emporter avec vous de la monnaie ou cartes de crédit.</p>
-              <img src="images/credit.jpg" alt="cadenas carte">
             </div>
-            <div class="">
-              <img src="5980.jpg" alt="">
+            <img class="description" src="images/credit.jpg" alt="cadenas carte">
+          </section>
+          <section class="technologie">
+            <img class="description" src="images/5980.jpg" alt="">
+            <div class="image_description">
               <p>Le système de cartographie TopoActive Europe préchargée dans la Run’Zik S Plus
                 fournit des données cartographiques optimisées et un suivi de localisation de qualité
                 supérieure. Pour les coureurs et cyclistes aventuriers, la fonction
@@ -132,9 +146,10 @@
                   <p>Les fonctions Navigation Intuitive et Around me, allouent des indications plus
                     pointus lors de vos déplacements tout en rendant plus intuitive l'utilisation de la
                     cartographie.</p>
-
                   </div>
-                  <div class="">
+                </section>
+                <section class="technologie">
+                  <div class="image_description">
                     <p>Le cardio-poignet Run’Zik vous permet de moduler l'intensité de votre entraînement
                       en fonction de votre rythme cardiaque. La montre Run’Zik S Plus ne laisse rien au
                       hasard en terme d'analyse d'activité sportive. Vous disposez en un coup d’œil des
@@ -143,13 +158,15 @@
                       <p>En couplant votre montre via Run’Zik Connect, vous gardez toujours un lien avec vos
                         proches grâce à sa fonction GroupTrack. Le LiveTrack permet à vos amis de vous
                         suivre en temps réel durant vos sorties ou courses.</p>
-                        <img src="images/18260.jpg" alt="">
-
                       </div>
+                      <img class="description" src="images/18260.jpg" alt="">
                     </section>
+
                     <section>
-                      <h2>Descriptif technique</h2>
-                      <div class="">
+                      <div class="title_des">
+                        <h2>Descriptif technique</h2>
+                      </div>
+                      <div class="liste">
                         <ul>
                           <li>Cardio-poignet Elevate : mesure de la fréquence cardiaque</li>
                           <li>Garmin Chroma Display : écran couleur haute résolution</li>
