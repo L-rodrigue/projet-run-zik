@@ -9,7 +9,7 @@ body, ul, li {
 
 header {
   height: 600px;
-  background-image: url("images/runner.jpeg");  
+  background-image: url("images/usain_bolt.jpg");  
   background-size: cover;
 }
 
@@ -33,6 +33,11 @@ p {
 
 footer {
   color: white;
+}
+
+.bolt {
+  background-color: rgba(241, 106, 60, 0.4);
+  border-radius: 5px 0 0 5px;
 }
 
 .important {
@@ -169,6 +174,12 @@ footer {
   border-radius: 5px;
 }
 
+.imgRunner {
+  width: 100%;
+  order: -1;
+  border-radius: 5px;
+}
+
 .guarantees {
   background-color: rgba(247, 244, 243, 1);
   display: flex;
@@ -197,6 +208,7 @@ footer {
   height: 470px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .makingOf > div {
