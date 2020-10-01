@@ -204,7 +204,6 @@ footer {
 }
 
 .makingOf {
-  display: flex;
   height: 470px;
   display: flex;
   justify-content: space-around;
@@ -218,16 +217,17 @@ footer {
 }
 
 .makingOf img {
-  width: 30%;
+  width: 20%;
 }
 
 .ourProducts {
   text-align: center;
   background-color: rgba(247, 244, 243, 1);
+  padding-bottom: 50px;
 }
 
 .ourProducts > h2 {
-  margin-top: 0;
+  padding: 50px 0;
   font-size: 48px;
 }
 

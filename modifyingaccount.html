@@ -12,7 +12,7 @@
   <header>
     <nav>
       <div class="headerTop">
-        <a href="index.html" title="Vers l'accueil">
+        <a href="index.html">
           <img src="images/logo.png" alt="Run'Zik">
         </a>
         <div class="headerTopRight">
@@ -44,7 +44,7 @@
                     <a href="#">Assistance</a>
                     <ul class="scrollMenu">
                       <li>
-                        <a href="faq.html" title="Vers la montre connectée">FAQ</a>
+                        <a href="FAQ.html" title="Vers la montre connectée">FAQ</a>
                       </li>
                       <li>
                         <a href="contact.html" title="Vers le brassard">Contact</a>
@@ -54,10 +54,29 @@
                 </ul>
             </div>
           </div>
-          <a href="account.html" title="Gérer le compte">
-            <img class="icon" src="images/account.png" alt="Mon compte">
-          </a>
-          <a href="cart.html" title="Consulter le panier">
+          <div class="accountHover">
+            <a href="account.html" title="Mon compte">
+              <img class="icon" src="images/account.png" alt="Mon compte">
+            </a>
+            <div class="connectAccount">
+              <p class="important">Pas de compte ?</p>
+              <a href="inscription.html" title="S'inscrire">Inscrivez-vous</a>
+              <p>Ou</p>
+              <p class="important">Connectez-vous</p>
+              <div class="elementConnexion">
+                <label for="mail">Adresse e-mail</label>
+                <input class="searchBar connexionForm" type="text" id="mail">
+              </div>
+              <div class="elementConnexion">
+                <label for="pass">Mot de passe</label>
+                <input class="searchBar connexionForm" type="password" id="pass">
+              </div>
+              <div class="connexionButton">
+                <input class="button submitConnexion" type="submit" value="Se connecter">
+              </div>
+            </div>
+          </div>
+          <a href="cart.html" title="Mon panier">
             <img class="icon" src="images/cart.png" alt="Panier">
           </a>
         </div>
@@ -107,18 +126,18 @@
           <p>Inscrivez-vous à la newsletter et recevez toutes nos offres exclusives</p>
         </div>
         <div class="formNewsletter">
-          <input class="newsletterMail" type="text" value="Entrez votre adresse mail">
+          <input class="newsletterMail" type="mail" value="Entrez votre adresse mail">
           <input class="button newsletterSubmit" type="submit" value="OK">
         </div>
       </div>
       <div class="socialNetworks">
-        <a href="#" title="Consulter notre compte Pinterest">
+        <a href"#" title="Découvrir notre Pinterest">
           <img src="images/pinterest.png">
         </a>
-        <a href="#" title="Consulter notre compte Facebook">
+        <a href"#" title="Découvrir notre Facebook">
           <img src="images/facebook.png">
         </a>
-        <a href="#" title="Consulter notre compte Twitter">
+        <a href"#" title="Découvrir notre Twitter">
           <img src="images/twitter.png">
         </a>
       </div>
@@ -131,7 +150,7 @@
         <div class="footerList">
           <ul>
             <li>
-              <a href="faq.html">FAQ</a>
+              <a href="FAQ.html">FAQ</a>
             </li>
             <li>
               <a href="contact.html">Contactez-nous</a>
