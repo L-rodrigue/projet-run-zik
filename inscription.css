@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+}
+main{
+    margin: 0 5%;
+}
+
+.title{
+    text-align: center;
+    margin: 5% 0 3% 0;
+}
+.containeur{
+    margin-bottom: 1%;
+}
+.containeur2{
+    margin-bottom: 3%;
+}
+.containeur3{
+    margin-bottom: 1%;
+}
+.containeur4{
+    margin-bottom: 10%;
+}
+.name{
+    color: #219C9A;
+    float: left;
+    margin-right: 60%;
+}
+.mdp{
+    color: #219C9A;
+}
+.mail{
+    color: #219C9A;
+    float: left;
+    margin-right: 60%;
+}
+.mdp2{
+    color: #219C9A;
+}
+.searchname{
+   background-color: #F7F4F3;
+   float: left;
+   margin-right: 49%;
+   border: none;
+}
+.searchmdp{
+    background-color: #F7F4F3;
+    border: none;
+ }
+ .searchnmail{
+    background-color: #F7F4F3;
+    float: left;
+    margin-right: 49%;
+    border: none;
+ }
+ .searchmdp2{
+    background-color: #F7F4F3;
+    border: none;
+ }
+ .checkbox{
+    display: inline-block;
+    margin: 3% 1%;
+}
+.button-v {
+    margin: 5% 40%;
+    background-color: rgba(241, 106, 60, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+}
