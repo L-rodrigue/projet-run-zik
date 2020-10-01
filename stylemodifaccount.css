@@ -1,0 +1,52 @@
+.submit,
+.submitbis,
+.submitfirst {
+    text-align: center;
+    padding: 0 0 2% 0;
+  }
+  
+  .submitInformations {
+    width: 300px;
+    font-size: 24px;
+  }
+
+h2 {
+    color: #21919a;
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .password {
+    width: 300px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(171, 171, 171);
+    padding-left: 15px;
+  }
+
+  .lefthand {
+    float:left;
+    padding-left: 170px;
+  }
+
+  .righthand {
+    float:right;
+    padding-right: 170px;
+  }
+
+  .modifaccount {
+    margin-bottom: 500px;
+  }
+
+  .modifaccount p {
+    color: #21919a;
+  }
+
+  .submitfirst p {
+    color: #21919a;
+  }
+
+  .submitbis input {
+      background-color: #de5900;
+  }
