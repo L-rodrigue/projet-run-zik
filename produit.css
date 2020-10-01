@@ -102,3 +102,10 @@ li {
   margin-bottom: 10px;
   height: 250px;;
 }
+.presentation {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 20px 0;
+  padding-left: 50px;
+}
