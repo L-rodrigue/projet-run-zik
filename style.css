@@ -35,6 +35,11 @@ footer {
   color: white;
 }
 
+.important {
+  color: rgba(241, 106, 60, 1);
+  font-size: 24px;
+}
+
 .headerTop {
   padding: 20px;
 }
@@ -102,6 +107,47 @@ footer {
 .scrollMenu li:hover {
   background-color: rgba(241, 106, 60, 0.15);
   border-radius: 5px; 
+}
+
+.accountHover:hover .connectAccount{
+  display: block;
+}
+
+.connectAccount {
+  display: none;
+  width: 15%;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.connectAccount > a {
+  color: rgba(33, 156, 154, 1);
+}
+
+.connexionForm {
+  background-color: rgba(196, 196, 196, 1);
+}
+
+.connexionButton {
+  margin: 10px 0;
+}
+
+.connexionButton input {
+  width: 100%;
+  font-size: 24px;
+}
+
+.submitConnexion {
+  width: 70%;
+  height: 40px;
+}
+
+.elementConnexion {
+  margin: 10px 0;
 }
 
 .headerBottom {
