@@ -11,10 +11,10 @@ span {
   color: #F16A3C;
   font-size: 24px;
 }
-ul {
+section ul {
   margin: 30px;
 }
-li {
+section li {
   list-style: inside;
 }
 .tva {
