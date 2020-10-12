@@ -9,7 +9,7 @@ body, ul, li {
 
 header {
   height: 700px;
-  background-image: url("images/runner.jpeg");  
+  background-image: url("images/runner.jpeg");
   background-position-y: 99px;
   background-size: cover;
 }
@@ -35,7 +35,21 @@ p {
 footer {
   color: white;
 }
-
+.numberOfItems {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgba(33, 156, 154, 1);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .bolt {
   background-color: rgba(241, 106, 60, 0.4);
   border-radius: 5px 0 0 5px;
@@ -109,17 +123,19 @@ footer {
 }
 
 .scrollMenu li:hover {
-  background-color: rgba(241, 106, 60, 0.15);
-  border-radius: 5px; 
+  background-color: white;
+  border-radius: 5px;
 }
 
 .accountHover:hover .connectAccount{
   display: block;
 }
 
-.connectAccount {
+.cartHover:hover .recapCart {
+  display: block;
+}
+.connectAccount, .recapCart {
   display: none;
-  width: 15%;
   padding: 20px;
   text-align: center;
   position: absolute;
@@ -127,7 +143,6 @@ footer {
   border-radius: 5px;
   background-color: white;
 }
-
 .connectAccount > a {
   color: rgba(33, 156, 154, 1);
 }

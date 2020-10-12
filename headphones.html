@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="produit.css">
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
- <title>Casque Run'Zik</title>
+  <title>Casque Run'Zik</title>
 </head>
 <body>
   <header>
@@ -17,39 +17,39 @@
         <div class="navigation">
           <input class="searchBar" type="text" value="Recherche...">
           <div class="menu">
-              <ul>
-                <li>
-                  <a href="marque.html">La marque</a>
-                </li>
-                <li>
-                  <a href="technologies.html">Nos technologies</a>
-                </li>
-                <li>
-                  <a href="#">Nos produits</a>
-                  <ul class="scrollMenu">
-                    <li>
-                      <a href="watch.html" title="Vers la montre connectée">Montre</a>
-                    </li>
-                    <li>
-                      <a href="armbrand.html" title="Vers le brassard">Brassard</a>
-                    </li>
-                    <li>
-                      <a href="headphones.html" title="Vers le casque">Casque</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Assistance</a>
-                  <ul class="scrollMenu">
-                    <li>
-                      <a href="FAQ.html" title="Vers la montre connectée">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="contact.html" title="Vers le brassard">Contact</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <ul>
+              <li>
+                <a href="marque.html">La marque</a>
+              </li>
+              <li>
+                <a href="technologies.html">Nos technologies</a>
+              </li>
+              <li>
+                <a href="#">Nos produits</a>
+                <ul class="scrollMenu">
+                  <li>
+                    <a href="watch.html" title="Vers la montre connectée">Montre</a>
+                  </li>
+                  <li>
+                    <a href="armbrand.html" title="Vers le brassard">Brassard</a>
+                  </li>
+                  <li>
+                    <a href="headphones.html" title="Vers le casque">Casque</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Assistance</a>
+                <ul class="scrollMenu">
+                  <li>
+                    <a href="FAQ.html" title="Vers la montre connectée">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" title="Vers le brassard">Contact</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="accountCart">
@@ -75,20 +75,29 @@
               </div>
             </div>
           </div>
-          <a href="cart.html" title="Mon panier">
-            <img class="icon" src="images/cart.png" alt="Panier">
-          </a>
+          <div class="cartHover">
+            <a href="cart.html" title="Mon panier">
+              <img class="icon" src="images/cart.png" alt="Panier">
+              <div class="numberOfItems">
+                
+              </div>
+            </a>
+            <div class="recapCart">
+
+            </div>
+          </div>
+
         </div>
       </div>
     </nav>
   </header>
   <h3 class="orange">Casque</h3>
-  <h4 class="blue">Casque confort Run‘Zik</h4>
+  <h4 class="blue" id="product">Casque confort Run‘Zik</h4>
   <section class="cart">
     <img class="headphone" src="images/casque-bluetooth-sport.jpg" alt="casque">
     <div class="watch">
       <div class="price">
-        <p>Prix:  <span>189 €</span></p>
+        <p>Prix:  <span id="price">189</span>€</p>
         <div class="tva">
           <h4>* Tous les prix incluent la TVA</h4>
         </div>
@@ -112,15 +121,16 @@
       <div class="padding">
         <div class="quantity">
           <label for="">Quantité :</label>
-          <p class="carachter">+</p>
-          <input type="checkbox" name="check" value="">
-          <p class="caracther">-</p>
+          <p class="carachter" id="more">+</p>
+          <span id="quantity">1</span>
+          <p class="caracther" id="less">-</p>
         </div>
       </div>
-      <div class="ajout">
+      <div class="ajout" id="addToCart">
         <img class="icon white" src="images/shopping_white.png" alt="Panier">
         <label for="">Ajouter au panier</label>
       </div>
+      <p id="event"></p>
     </div>
   </section>
   <div class="title_des">
@@ -249,57 +259,59 @@
 
 
 
-                    
-  <footer>
-    <div class="footerTop">
-      <div class="newsletter">
-        <div class="textNewsletter">
-          <p>Inscrivez-vous à la newsletter et recevez toutes nos offres exclusives</p>
-        </div>
-        <div class="formNewsletter">
-          <input class="newsletterMail" type="mail" value="Entrez votre adresse mail">
-          <input class="button newsletterSubmit" type="submit" value="OK">
-        </div>
-      </div>
-      <div class="socialNetworks">
-        <a href"#" title="Découvrir notre Pinterest">
-          <img src="images/pinterest.png">
-        </a>
-        <a href"#" title="Découvrir notre Facebook">
-          <img src="images/facebook.png">
-        </a>
-        <a href"#" title="Découvrir notre Twitter">
-          <img src="images/twitter.png">
-        </a>
-      </div>
-    </div>
-    <div class="footerBottom">
-      <div class="footerBottomFirstPart">
-        <div class="payPlug">
-          <img src="images/payplug.png">
-        </div>
-        <div class="footerList">
-          <ul>
-            <li>
-              <a href="FAQ.html">FAQ</a>
-            </li>
-            <li>
-              <a href="contact.html">Contactez-nous</a>
-            </li>
-            <li>
-              <a href="mentions.html">Mentions Légales</a>
-            </li>
-            <li>
-              <a href="mentions.html">Conditions d'utilisation</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footerBottomSecondPart">
-        <p>© 2019 - 2020 Run'Zik SAS</p>
-      </div>
-    </div>
-  </footer>
+
+                    <footer>
+                      <div class="footerTop">
+                        <div class="newsletter">
+                          <div class="textNewsletter">
+                            <p>Inscrivez-vous à la newsletter et recevez toutes nos offres exclusives</p>
+                          </div>
+                          <div class="formNewsletter">
+                            <input class="newsletterMail" type="mail" value="Entrez votre adresse mail">
+                            <input class="button newsletterSubmit" type="submit" value="OK">
+                          </div>
+                        </div>
+                        <div class="socialNetworks">
+                          <a href"#" title="Découvrir notre Pinterest">
+                            <img src="images/pinterest.png">
+                          </a>
+                          <a href"#" title="Découvrir notre Facebook">
+                            <img src="images/facebook.png">
+                          </a>
+                          <a href"#" title="Découvrir notre Twitter">
+                            <img src="images/twitter.png">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="footerBottom">
+                        <div class="footerBottomFirstPart">
+                          <div class="payPlug">
+                            <img src="images/payplug.png">
+                          </div>
+                          <div class="footerList">
+                            <ul>
+                              <li>
+                                <a href="FAQ.html">FAQ</a>
+                              </li>
+                              <li>
+                                <a href="contact.html">Contactez-nous</a>
+                              </li>
+                              <li>
+                                <a href="mentions.html">Mentions Légales</a>
+                              </li>
+                              <li>
+                                <a href="mentions.html">Conditions d'utilisation</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="footerBottomSecondPart">
+                          <p>© 2019 - 2020 Run'Zik SAS</p>
+                        </div>
+                      </div>
+                    </footer>
+                    <script type="text/javascript" src="script.js"></script>
+
 
                   </body>
                   </html>

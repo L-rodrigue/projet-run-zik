@@ -75,20 +75,28 @@
               </div>
             </div>
           </div>
-          <a href="cart.html" title="Mon panier">
-            <img class="icon" src="images/cart.png" alt="Panier">
-          </a>
+          <div class="cartHover">
+            <a href="cart.html" title="Mon panier">
+              <img class="icon" src="images/cart.png" alt="Panier">
+              <div class="numberOfItems">
+
+              </div>
+            </a>
+            <div class="recapCart">
+
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <h3 class="orange">Brassard</h3>
-  <h4 class="blue">Brassard Zik+ Run Belt</h4>
+  <h4 class="blue" id="product">Brassard Zik+ Run Belt</h4>
   <section class="cart">
     <img class="headphone" src="images/brassard.jpg" alt="brassard">
     <div class="watch">
       <div class="price">
-        <p>Prix:  <span>33 €</span></p>
+        <p>Prix:  <span id="price">33 </span>€</p>
         <div class="tva">
           <h4>* Tous les prix incluent la TVA</h4>
         </div>
@@ -104,15 +112,16 @@
       <div class="padding">
         <div class="quantity">
           <label for="">Quantité :</label>
-          <p class="carachter">+</p>
-          <input type="checkbox" name="check" value="">
-          <p class="caracther">-</p>
+          <p class="carachter" id="more">+</p>
+          <span id="quantity">1</span>
+          <p class="caracther" id="less">-</p>
         </div>
       </div>
-      <div class="ajout">
+      <div class="ajout" id="addToCart">
         <img class="icon white" src="images/shopping_white.png" alt="Panier">
         <label for="">Ajouter au panier</label>
       </div>
+      <p id="event"></p>
     </div>
   </section>
   <div class="title_des">
@@ -181,6 +190,8 @@
       </div>
     </div>
   </footer>
+  <script type="text/javascript" src="script.js"></script>
+
 
 </body>
 </html>
