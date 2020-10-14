@@ -1,103 +1,96 @@
 //Boutons quantité
 let quantity = document.querySelector('#quantity').innerHTML;//Je crée une variable et récupére la quantité
-document.querySelector('#more').addEventListener('click', function(){//Je séléctionne mon + et crée un événement click
-  quantity++;//J'ajoute +1 a ma quantité a chaque click de +
-  document.querySelector('#quantity').innerHTML = quantity;
+document.querySelector('#more').addEventListener('click', function () {//Je séléctionne mon + et crée un événement click
+    quantity++;//J'ajoute +1 a ma quantité a chaque click de +
+    document.querySelector('#quantity').innerHTML = quantity;
 });
-document.querySelector('#less').addEventListener('click', function(){//Je séléctionne mon - et crée un événement click
-  if(quantity > 1){//Je met une condition en lui disant si la quantité est supérieur a 1
-    quantity--;//Je retire de 1 la quantité
-  }
-  document.querySelector('#quantity').innerHTML = quantity;//J'affiche la quantité
-})
+document.querySelector('#less').addEventListener('click', function () {//Je séléctionne mon - et crée un événement click
+    if (quantity > 1) {//Je met une condition en lui disant si la quantité est supérieur a 1
+        quantity--;//Je retire de 1 la quantité
+    }
+    document.querySelector('#quantity').innerHTML = quantity;//J'affiche la quantité
+});
 
-let quantityTotal = 0;
-  if(localStorage.getItem('headphone') != null){
-    quantityTotal += parseInt(localStorage.getItem('headphone').split(',')[1]);//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
+
+const cart = {
+    productListInit() { //Initialisation de la liste produit
+        if (localStorage.getItem('cart')) {
+            cart.productList = JSON.parse(localStorage.getItem('cart')).productList;
+        }
+        else {
+            cart.productList = [];
+        }
+    },
+    addItem(product) {
+        let positionOfItem = this.selectItemInList(product);
+        console.log(positionOfItem);
+        if (!positionOfItem) {
+            this.productList.push(product);
+        }
+        else {
+            this.productList[positionOfItem].quantity += product.quantity;
+        }
+        console.log(cart);
+    },
+    selectItemInList(product) { //Si l'objet est trouvé, retourne son index, sinon retourne false
+        for (let index in this.productList) {
+            if (this.productList[index].key === product.key) {
+                return index;
+            }
+        }
+        return false;
+    },
+    totalQuantity() {
+        let totalPQuantity = 0;
+        for (let product in this.productList) {
+            totalPQuantity += this.productList[product].quantity;
+        }
+        return totalPQuantity;
+    }
 }
-  if(localStorage.getItem('watch') != null){
-    quantityTotal += parseInt(localStorage.getItem('watch').split(',')[1]);//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-}
-  if(localStorage.getItem('armbrand') != null){
-    quantityTotal += parseInt(localStorage.getItem('armbrand').split(',')[1]);//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-}
-if(quantityTotal === 0){
-  document.querySelector('.numberOfItems').style.display = 'none';
+
+cart.productListInit(); // Initialisation de la liste produit
+console.log(cart.productList);
+
+
+if (cart.totalQuantity() === 0) {
+    document.querySelector('.numberOfItems').style.display = 'none';
 } else {
-  document.querySelector('.numberOfItems').style.display = 'flex';
-  document.querySelector('.numberOfItems').innerHTML = quantityTotal;
+    document.querySelector('.numberOfItems').style.display = 'flex';
+    document.querySelector('.numberOfItems').innerHTML = cart.totalQuantity();
 }
-
+// On récupère ici le data-product qui a été mis dans le html
 //Boutons panier
-document.querySelector('#addToCart').addEventListener('click', function(){//Je séléctionne mon bouton ajouter au panier et lui met un événement click
-  quantity;//Je récupére la quantité
-  let product = document.querySelector('#product').innerHTML;//Je récupére le produit
-  let price = parseInt(document.querySelector('#price').innerHTML);//Je récupére le prix et le change car il est en chaine de caractéres
+document.querySelector('#addToCart').addEventListener('click', function () {//Je séléctionne mon bouton ajouter au panier et lui met un événement click
 
-  console.log(product);
-  if(product === 'Casque confort Run‘Zik'){
-    localStorage.setItem('headphone', [product,quantity,price]);
-  }
-  if(product === 'Montre Run\'Zik S plus'){
-    localStorage.setItem('watch', [product,quantity,price]);
-  }
-  if(product === 'Brassard Zik+ Run Belt'){
-    localStorage.setItem('armbrand', [product,quantity,price]);
-  }
-  document.querySelector('#event').innerHTML = 'Ajouter au panier';
-  quantity = 1;
-  document.querySelector('#quantity').innerHTML = quantity;
-
-let quantityTotal = 0;
-  if(localStorage.getItem('headphone') != null){
-    quantityTotal += parseInt(localStorage.getItem('headphone').split(',')[1]);//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-}
-  if(localStorage.getItem('watch') != null){
-    quantityTotal += parseInt(localStorage.getItem('watch').split(',')[1]);//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-}
-  if(localStorage.getItem('armbrand') != null){
-    quantityTotal += parseInt(localStorage.getItem('armbrand').split(',')[1]);//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-}
-if(quantityTotal === 0){
-  document.querySelector('.numberOfItems').style.display = 'none';
-} else {
-  document.querySelector('.numberOfItems').style.display = 'flex';
-  document.querySelector('.numberOfItems').innerHTML = quantityTotal;
-}
-  });
+    const product = {
+        key: document.querySelector('#product').dataset.product,
+        name: document.querySelector('#product').innerHTML,
+        price: parseInt(document.querySelector('#price').innerHTML),
+        quantity: parseInt(document.querySelector('#quantity').innerHTML)
+    };
+    cart.addItem(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    if (cart.totalQuantity() === 0) {
+        document.querySelector('.numberOfItems').style.display = 'none';
+    } else {
+        document.querySelector('.numberOfItems').style.display = 'flex';
+        document.querySelector('.numberOfItems').innerHTML = cart.totalQuantity();
+    }
+});
 
 
-  document.querySelector('.cartHover').addEventListener('mouseover', function(){//affiche dans le hover les éléments séléctionnées a jour
+document.querySelector('.cartHover').addEventListener('mouseover', function () {//affiche dans le hover les éléments séléctionnées a jour
     let totalPrice = 0;
     document.querySelector('.recapCart').innerHTML = '';
-    if(localStorage.getItem('headphone') != null){
-      let p = document.createElement('p');
-      p.innerHTML = '<span id="itemCartHeadphone"></span>Quantité<span id="quantityCartHeadphone"></span>Sous-total<span id="totalPriceCartHeadphone"></span>€';
-      document.querySelector('.recapCart').appendChild(p);
-      document.querySelector('#itemCartHeadphone').innerHTML = localStorage.getItem('headphone').split(',')[0];//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-      document.querySelector('#quantityCartHeadphone').innerHTML = localStorage.getItem('headphone').split(',')[1];//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-      document.querySelector('#totalPriceCartHeadphone').innerHTML = localStorage.getItem('headphone').split(',')[2] * localStorage.getItem('headphone').split(',')[1] ;//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-      totalPrice += localStorage.getItem('headphone').split(',')[2] * localStorage.getItem('headphone').split(',')[1];
+    for (let i in cart.productList) {
+        let p = document.createElement('p');
+        p.innerHTML += `${cart.productList[i].name}  Quantité  <span>${cart.productList[i].quantity}</span>  Sous-total  <span>${cart.productList[i].quantity * cart.productList[i].price}</span>€  `;   
+        document.querySelector('.recapCart').appendChild(p);
+        totalPrice += cart.productList[i].price * cart.productList[i].quantity;
     }
-    if(localStorage.getItem('watch') != null){
-      let p = document.createElement('p');
-      p.innerHTML = '<span id="itemCartWatch"></span>Quantité<span id="quantityCartWatch"></span>Sous-total<span id="totalPriceCartWatch"></span>€';
-      document.querySelector('.recapCart').appendChild(p);
-      document.querySelector('#itemCartWatch').innerHTML = localStorage.getItem('watch').split(',')[0];
-      document.querySelector('#quantityCartWatch').innerHTML = localStorage.getItem('watch').split(',')[1];
-      document.querySelector('#totalPriceCartWatch').innerHTML = localStorage.getItem('watch').split(',')[2] * localStorage.getItem('watch').split(',')[1] ;//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-      totalPrice += localStorage.getItem('watch').split(',')[2] * localStorage.getItem('watch').split(',')[1];
-    }
-    if(localStorage.getItem('armbrand') != null){
-      let p = document.createElement('p');
-      p.innerHTML = '<span id="itemCartArmbrand"></span>Quantité<span id="quantityCartArmbrand"></span>Sous-total<span id="totalPriceCartArmbrand"></span>€';
-      document.querySelector('.recapCart').appendChild(p);
-      document.querySelector('#itemCartArmbrand').innerHTML = localStorage.getItem('armbrand').split(',')[0];
-      document.querySelector('#quantityCartArmbrand').innerHTML = localStorage.getItem('armbrand').split(',')[1];//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-      document.querySelector('#totalPriceCartArmbrand').innerHTML = localStorage.getItem('armbrand').split(',')[2] * localStorage.getItem('armbrand').split(',')[1] ;//je selectionne la valeur stockée headphone, avec le.split je sépare les éléments du tableau et récupére le premier élément du tableau localStorage
-      totalPrice += localStorage.getItem('armbrand').split(',')[2] * localStorage.getItem('armbrand').split(',')[1];
-    }
-    let total = document.createElement('p');
-    document.querySelector('.recapCart').appendChild(total);
-    total.innerHTML = 'Montant total:' + ' ' + totalPrice + '€';
-  });
+    let p = document.createElement('p');
+    p.innerHTML = `Total : ${totalPrice}€`;
+    document.querySelector('.recapCart').appendChild(p);
+});
